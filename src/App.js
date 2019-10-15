@@ -3,6 +3,8 @@ import { Grid } from "@material-ui/core";
 import { SearchBar, VideoList, VideoDetail } from "./components";
 import youtube from "./api/youtube";
 
+import * as constants from "./constants";
+
 class App extends Component {
   state = {
     videos: [],
@@ -18,7 +20,7 @@ class App extends Component {
       params: {
         part: "snippet",
         maxResults: 5,
-        key: "AIzaSyBQw5FVNNRKvAC4AMwibRsBNCmRD7aatg4",
+        key: constants.API_KEY,
         q: searchTerm
       }
     });
